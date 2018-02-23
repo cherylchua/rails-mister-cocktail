@@ -1,0 +1,42 @@
+.banner {
+  background-image: asset-url('cocktail-bg.jpeg');
+  background-size: cover;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .banner-content {
+    text-align: center;
+
+    h1 {
+      font-family: 'Megrim', cursive;
+      font-size: 80px;
+      color: $yellow;
+    }
+
+    a {
+      margin: 20px 0;
+      color: $blue;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.cocktail-banner {
+  background-image: asset-url('cocktail-bg.jpeg');
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: 'Megrim', cursive;
+    font-size: 80px;
+    color: $yellow;
+  }
+}

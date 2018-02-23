@@ -1,0 +1,9 @@
+<div class="container container-create">
+  <h1>Create a New Cocktail</h1>
+
+  <%= simple_form_for(@cocktail) do |f|%>
+  <%= f.input :name %>
+  <%= f.submit 'Create Me!', { class: 'btn btn-info' }%>
+  <% end %>
+</div>
+
