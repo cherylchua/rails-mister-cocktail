@@ -10,7 +10,7 @@
     text-align: center;
 
     h1 {
-      font-family: 'Megrim', cursive;
+
       font-size: 80px;
       color: $yellow;
     }
@@ -27,7 +27,7 @@
 }
 
 .cocktail-banner {
-  background-image: asset-url('cocktail-bg.jpeg');
+  // background-image: asset-url('cocktail-bg.jpeg');
   background-size: cover;
   height: 300px;
   display: flex;
@@ -39,4 +39,8 @@
     font-size: 80px;
     color: $yellow;
   }
+}
+
+#banner-typed-text {
+  color: $yellow;
 }

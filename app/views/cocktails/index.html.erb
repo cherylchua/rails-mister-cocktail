@@ -3,6 +3,8 @@
     <div class="banner-content">
       <h1>Cocktail Hours <i class="fas fa-glass-martini"></i></h1>
       <%= link_to "Create Your Own Magic", new_cocktail_path, class: "btn btn-info"%>
+        <h2><span id="banner-typed-text"></span></h2>
+      </div>
     </div>
   </div>
 
@@ -11,8 +13,17 @@
       <div class="row">
         <ul>
           <% @cocktails.each do |cocktail| %>
+
+          <% if cocktail.photo? %>
+          <% file = cocktail.photo %>
+          <% else %>
+          <% file = 'default-cocktail' %>
+          <% end %>
+
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <li class="card"><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
+            <li style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(<%= cl_image_path file, crop: :fill %>)" class="card">
+              <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+            </li>
           </div>
           <% end %>
         </ul>
@@ -20,3 +31,5 @@
     </div>
   </div>
 </div>
+
+<%#= cl_image_tag 'nahvyjuwvdz8fy3upyc6', crop: :fill %>

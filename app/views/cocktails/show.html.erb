@@ -1,4 +1,10 @@
-<div class="cocktail-banner">
+<% if @cocktail.photo? %>
+  <% file = @cocktail.photo %>
+<% else %>
+  <% file = 'default-cocktail' %>
+<% end %>
+
+<div style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(<%= cl_image_path file, height: 400, width: 400, crop: :fill %>);" class="cocktail-banner">
   <h1><%= @cocktail.name %></h1>
 </div>
 
